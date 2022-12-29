@@ -4,14 +4,17 @@ import { useParams } from "react-router-dom";
 import Forks from "../../components/Forks";
 import "./styles.css";
 
-const GistDetailsInner = (props) => {
+const GistDetailsInner = ({ fetchSingleGist, singleGist, location }) => {
   const { id } = useParams();
+
   useEffect(() => {
-    props.fetchSingleGist(id);
+    if (id) {
+      fetchSingleGist(id);
+    }
   }, [id]);
 
   const renderForks = () => {
-    const { isLoading, error, forks } = props.singleGist;
+    const { isLoading, error, forks } = singleGist;
     if (isLoading) {
       return <p className="text-white">Loading ...</p>;
     }
@@ -22,7 +25,7 @@ const GistDetailsInner = (props) => {
     }
   };
 
-  const { description, files } = props.location.state;
+  const { description, files } = location.state;
 
   return (
     <>
@@ -45,6 +48,7 @@ const GistDetailsInner = (props) => {
                       <a
                         href={file.raw_url}
                         target="_blank"
+                        rel="noreferrer"
                         className="text-white"
                       >
                         {file.filename}
@@ -66,6 +70,8 @@ const GistDetailsInner = (props) => {
 };
 
 GistDetailsInner.propTypes = {
-  props: PropTypes.object,
+  fetchSingleGist: PropTypes.func,
+  singleGist: PropTypes.object,
+  location: PropTypes.object,
 };
 export default GistDetailsInner;
