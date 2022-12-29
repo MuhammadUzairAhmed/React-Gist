@@ -1,0 +1,14 @@
+  .header {
+    height: 80px;
+    background: #495057;
+	padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .head-filter {
+    background-color: #E9ECEF;
+    color: #495057;
+    text-align: center;
+  }
+  

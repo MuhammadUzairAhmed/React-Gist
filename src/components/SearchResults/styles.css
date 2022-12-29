@@ -1,0 +1,9 @@
+.results-box {
+    margin-top: 130px;
+}
+.status-box {
+    margin: 20px 0;
+    border: 1px solid #9a9a9a;
+    background-color: #efefef;
+    padding: 5px 15px;
+}

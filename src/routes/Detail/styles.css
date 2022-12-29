@@ -1,0 +1,11 @@
+.details-box {
+    margin-top: 50px;
+    border: 1px solid #dddddd;
+    padding: 20px;
+}
+.forks-box, .files-box {
+    margin-top: 10px;
+}
+.forks-box a, .files-box a {
+    text-decoration: underline;
+}

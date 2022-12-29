@@ -1,0 +1,24 @@
+/* Common Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.loader, .error-box {
+  padding: 20px;
+  margin: 40px;
+}
+.indent-left {
+  margin-left: 10px;
+}

@@ -1,0 +1,7 @@
+.list-row {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-decoration: none;
+}
